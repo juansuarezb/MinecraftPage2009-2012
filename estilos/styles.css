@@ -20,7 +20,10 @@ body{
     background-color: #333;
     background: url("../assets/top-bg.gif") repeat;
     display: flex;
-    align-items: center;
+    align-items:center;
+    flex-direction: row;
+    justify-content: space-between;
+
 }
 
 .principal {
@@ -31,13 +34,26 @@ body{
 }
 
 .logoImg{
-    height: 40px;
+    height: 38px;
     margin: 4px 0 0 16px;
+}
+.menu-toggle{
+    cursor: pointer;
+    margin-right: 16px;
 }
 
 .nav-links {
-    display: flex;
+    display: none;
     gap: 16px;
     margin-left: auto;
     margin-right: 16px;
+}
+
+@media (width > 425px){
+    .nav-links {
+        display: flex;
+    }
+    .menu-toggle {
+        display: none;
+    }
 }
