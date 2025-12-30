@@ -10,22 +10,55 @@
 
 <body>
     <nav class="topBar">
-        <a href="/" class="logo">
-            <img src="assets/logo.png" alt="Logo" class="logoImg">
-        </a>
-        <button class="menu-toggle" aria-label="Abrir menú">
-            ☰
-        </button>
-        <ul class="nav-links">
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#servicios">Servicios</a></li>
-            <li><a href="#precios">Precios</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-        </ul>
+        <div class="nav-inner">
+            <div class="nav-left">
+                <a href="/" class="logo">
+                    <img src="assets/logo.png" class="logoImg">
+                </a>
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Game</a></li>
+                    <li><a href="#">Community</a></li>
+                    <li><a href="#">Store</a></li>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+            </div>
+            <ul class="login">
+                <li><a href="#">Login</a></li>
+                <li class="separator">|</li>
+                <li><a href="#">Register</a></li>
+            </ul>
+        </div>
     </nav>
-    <main class="principal">
+<main class="principal">
+    <div class="container layout">
+        <section class="left">
+            <div class="video">
+                <iframe
+                    width="630"
+                    height="350"
+                    src="https://web.archive.org/web/20120103205151if_/https://www.youtube.com/embed/MmB9b5njVbA?hd=1&autohide=1&showinfo=0&wmode=opaque"
+                    frameborder="0"
+                    allowfullscreen>
+                </iframe>
+            </div>
 
-    </main>
+            <p>
+                Minecraft is a game about placing blocks to build anything you 
+                can imagine. At night monsters come out, make sure to build a 
+                shelter before that happens. It also has music by <a href="">C418</a>! 
+                So far <span class="total_users">18,558,513</span> people have registered 
+                and <span class="paid_users">4,367,543</span> people 
+                bought the game. <a href="">More stats here.</a>
+            </p>
+        </section>
+
+        <section class="right">
+            <!-- contenido lateral (buy now, links, etc) -->
+        </section>
+    </div>
+</main>
 </body>
 
 </html>
