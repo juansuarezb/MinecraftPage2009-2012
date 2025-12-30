@@ -121,7 +121,7 @@ a {
     color: #ccc;
 }
 
-.left a {
+.first>p a, .left a, .bottom a {
     color: #77f;
 }
 
@@ -134,10 +134,54 @@ a {
 }
 
 .btnComprar img {
-    display: block;        /* evita el gap fantasma */
+    display: block;
     max-width: 100%;
     height: auto;
 }
+.bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    padding: 32px 24px;
+    width: 100%;
+}
+
+.bottom > div {
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+.encabezado{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.bottom p,
+.bottom ul {
+    color: #ccc;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.bottom ul li {
+    margin-bottom: 8px;
+}
+
+.bottom small {
+    color: #999;
+    font-size: 12px;
+}
+
+.bottom p{
+    margin: 20px 0;
+}
+
 @media (width > 425px) {
     .nav-links {
         display: flex;
@@ -161,14 +205,13 @@ a {
     }
 
     .container {
-        max-width: 800px;
+        max-width: 1200px;
         margin: 0 auto;
     }
 
     .nav-links a,
     .login a {
         padding: 0 10px;
-        /* ← clave */
         display: inline-block;
     }
 
@@ -178,7 +221,39 @@ a {
     .layout {
         display: grid;
         grid-template-columns: 2fr 1fr;
+        grid-template-rows: auto auto;
         gap: 24px;
         align-items: start;
+    }
+    
+    .left {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    
+    .right {
+        grid-column: 2;
+        grid-row: 1;
+    }
+    
+    .bottom {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 48px;
+        max-width: 100%;
+        padding: 48px 0;
+    }
+
+    .bottom > div {
+        flex: 1;
+        text-align: left;
+        max-width: none;
+    }
+    
+    .encabezado {
+        justify-content: flex-start;
     }
 }
