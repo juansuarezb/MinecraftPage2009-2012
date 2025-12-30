@@ -124,6 +124,20 @@ a {
 .left a {
     color: #77f;
 }
+
+.right{
+    text-align: center;
+}
+.btnComprar {
+    display: inline-block;
+    margin-top: 16px;
+}
+
+.btnComprar img {
+    display: block;        /* evita el gap fantasma */
+    max-width: 100%;
+    height: auto;
+}
 @media (width > 425px) {
     .nav-links {
         display: flex;
