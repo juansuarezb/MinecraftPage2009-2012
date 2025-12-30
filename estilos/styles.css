@@ -4,13 +4,23 @@
     box-sizing: border-box;
 
 }
+html, body{
+    overflow-x: hidden;
+    width: 100%;
+}
+body{
+    height: 100vh;
+    margin: 0;
 
+}
 .topBar {
     width: 100%;
     height: fit-content;
     min-height: 48px;
     background-color: #333;
     background: url("../assets/top-bg.gif") repeat;
+    display: flex;
+    align-items: center;
 }
 
 .principal {
@@ -18,4 +28,16 @@
     min-height: calc(100vh - 48px);
     background-color: #f0f0f0;
     background: url("../assets/bg.gif") repeat;
+}
+
+.logoImg{
+    height: 40px;
+    margin: 4px 0 0 16px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 16px;
+    margin-left: auto;
+    margin-right: 16px;
 }
